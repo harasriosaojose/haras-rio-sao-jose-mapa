@@ -196,9 +196,9 @@ Regra de conteúdo: só entram em `pontos.json` itens que constam do contrato de
 
 ## Publicação
 
-Repositório: https://github.com/Jachsonazevedo/haras-rio-sao-jose-mapa · Site: https://jachsonazevedo.github.io/haras-rio-sao-jose-mapa/
+Repositório: https://github.com/harasriosaojose/haras-rio-sao-jose-mapa · Site: https://harasriosaojose.github.io/haras-rio-sao-jose-mapa/
 
-Link direto para um lote: `https://jachsonazevedo.github.io/haras-rio-sao-jose-mapa/?lote=318`
+Link direto para um lote: `https://harasriosaojose.github.io/haras-rio-sao-jose-mapa/?lote=318`
 
 ## Mapa ilustrado 2,5D (o próprio mapa interativo)
 
@@ -254,3 +254,6 @@ O voo (3 min 36 s) tem trilha própria de música + natureza acompanhando os cap
 
 ### Tour: abertura com o mapa 3D do app (01/10/2026)
 A cena "360-geral" do passeio virtual não mostra mais a esfera vista de cima: mostra o mapa 3D do app (`../?embed=1`, modo só-mapa definido em `index.html` + `css/styles.css` `html.embed`) num iframe entre o topo e as miniaturas (`mostrarMapa()` em `tour/tour.js`). Toque no lote, painel com medidas e WhatsApp funcionam dentro do tour; setas, zoom da foto e "Escolher unidade" somem nessa cena.
+
+### Endereço novo (01/10/2026)
+Repositório e site migrados para a conta do Haras: **https://github.com/harasriosaojose/haras-rio-sao-jose-mapa** · **https://harasriosaojose.github.io/haras-rio-sao-jose-mapa/**. O endereço antigo (`jachsonazevedo.github.io/haras-rio-sao-jose-mapa/`) ficou só com `index.html`/`404.html` de redirecionamento automático, mantendo caminho, `?lote=` e `#cena` — links já enviados continuam funcionando. Publicar agora exige o `gh` com a conta **harasriosaojose** ativa (`gh auth switch -u harasriosaojose`).
