@@ -647,7 +647,7 @@ async function iniciarTour() {
 }
 
 async function carregar() {
-  const r = await fetch('cenas.json?v=8', { cache: 'no-cache' });
+  const r = await fetch('cenas.json?v=9', { cache: 'no-cache' });
   dados = await r.json();
   montarMiniaturas();
   ligarEventos();
