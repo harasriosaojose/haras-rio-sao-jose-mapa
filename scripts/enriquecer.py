@@ -37,7 +37,8 @@ print("imóvel:", len(imovel), "vértices |", f"{cv2.contourArea(c)/1e4:.1f} ha"
 # ---------- avenidas: eixo entre a faixa de glebas (superior/inferior) e a malha central ----------
 # classifica glebas: "topo" = nenhuma gleba acima dela no mesmo intervalo de x; "base" = nenhuma abaixo
 def bbox(poly): return (min(p[0] for p in poly), min(p[1] for p in poly), max(p[0] for p in poly), max(p[1] for p in poly))
-GB = {g["id"]: bbox(g["poly"]) for g in J["glebas"] if len(g["poly"]) >= 3}
+GP_ = J.get("glebas_planta", J["glebas"])   # avenidas/ruas saem da planta (57), não do registro
+GB = {g["id"]: bbox(g["poly"]) for g in GP_ if len(g["poly"]) >= 3}
 def sobrepoe_x(a, b): return min(a[2], b[2]) - max(a[0], b[0]) > 30
 topo_ids, base_ids = set(), set()
 for gid, bb in GB.items():
@@ -53,11 +54,11 @@ if base_ids:
 print("glebas da faixa superior:", sorted(topo_ids), "| inferior:", sorted(base_ids))
 def mascara(ids):
     m = np.zeros((H, W), np.uint8)
-    for g in J["glebas"]:
+    for g in GP_:
         if g["id"] in ids: cv2.fillPoly(m, [np.array([[p[0]-x0, p[1]-y0] for p in g["poly"]], np.int32)], 255)
     return m
 m_topo, m_base = mascara(topo_ids), mascara(base_ids)
-m_malha = mascara({g["id"] for g in J["glebas"]} - topo_ids - base_ids)
+m_malha = mascara({g["id"] for g in GP_} - topo_ids - base_ids)
 
 def eixo(m_faixa, m_outra, faixa_em_cima):
     pts_ = []
@@ -181,7 +182,7 @@ print("pontos:", [(p["n"], p["id"], "pin" if p["c"] else "sem pin") for p in pon
 J["areas"] = areas; J["vias"] = vias; J["pontos"] = pontos
 J["meta"]["avenidas"] = AV_NOMES; J["meta"]["ruas"] = len(ruas)
 J["meta"]["area_total_m2"] = round(sum((l.get("area") or 0) for l in J["lotes"]), 2)
-J["meta"]["glebas"] = len(J["glebas"])
+J["meta"]["glebas"] = len(J["glebas"])   # registro.py ajusta para 34
 allpts = [p for l in J["lotes"] for p in l["poly"]] + [p for a in areas for p in a["poly"]] + [p for v in vias for p in v["pts"]]
 J["meta"]["bbox"] = [round(min(p[0] for p in allpts), 1), round(min(p[1] for p in allpts), 1), round(max(p[0] for p in allpts), 1), round(max(p[1] for p in allpts), 1)]
 json.dump(J, open(JP, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))

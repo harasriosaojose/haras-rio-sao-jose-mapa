@@ -14,7 +14,7 @@
    ===================================================================== */
 import * as THREE from 'three';
 import { MapControls } from 'three/addons/controls/MapControls.js';
-import { construirCena, enquadrarPontos, simplificarPoly } from './cena3d.js?v=20260926a';
+import { construirCena, enquadrarPontos, simplificarPoly } from './cena3d.js?v=20261027a';
 
 const ponte = window.HarasMapa;
 const quadro = document.getElementById('mapa-quadro');

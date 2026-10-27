@@ -796,7 +796,7 @@ export function construirCena(dados, op = {}) {
 
   // Selo de cada gleba (a planta abre um círculo no número): pracinha clara com o número (rótulo HTML por cima)
   const geoSelos = [];
-  for (const g of dados.glebas) if (Array.isArray(g.label)) geoSelos.push(disco(g.label[0], g.label[1], 11.5, 0, 28));
+  for (const sp of (Array.isArray(dados.selos) ? dados.selos : dados.glebas.map((g) => g.label))) if (Array.isArray(sp)) geoSelos.push(disco(sp[0], sp[1], 11.5, 0, 28));
   if (geoSelos.length && !op.semStatus) grupoPlano.add(planos(new THREE.Mesh(mergeGeometries(geoSelos.map(soPlano)), matPlano({ color: '#ABBE6B', map: texGrama })), 5.9));
 
   function pintarLote(id, c) {

@@ -370,13 +370,15 @@
     el.gLotes.appendChild(fragLotes);
     el.gRotulos.appendChild(fragRotulos);
 
-    // 5) Glebas: contorno verde-escuro + número (tamanho constante em px)
+    // 5) Glebas: contorno verde-escuro + número (tamanho constante em px).
+    //    data.glebas = desmembramento REGISTRADO (34 glebas, matrículas 15.195–15.228); data.selos = pontos da planta
+    //    em que o desenho CAD abre um círculo entre os lotes (cobertos por um selo liso, sem número).
+    const selos = Array.isArray(data.selos) ? data.selos : data.glebas.map((g) => g && g.label);
+    for (const sp of selos) if (pontoValido(sp)) el.gGlebas.appendChild(criar('circle', { class: 'gleba-selo', cx: sp[0], cy: sp[1], r: 11.5, 'vector-effect': NSS }));
     for (const g of data.glebas) {
       if (!g || !polyValido(g.poly)) continue;
       el.gGlebas.appendChild(criar('polygon', { class: 'gleba', points: pontos(g.poly), 'vector-effect': NSS }));
-      // Selo da gleba: cobre o círculo que a planta CAD abre entre os lotes no ponto do número (camada 2,5D, em metros)
       const cw = pontoValido(g.label) ? g.label : centroide(g.poly);
-      el.gGlebas.appendChild(criar('circle', { class: 'gleba-selo', cx: cw[0], cy: cw[1], r: 11.5, 'vector-effect': NSS }));
       const c = proj(cw);
       el.gRotulosGlebas.appendChild(criar('text', { class: 'rotulo-gleba', x: c[0], y: c[1] }, String(g.id)));
       const bb = bboxDe(g.poly);
@@ -962,7 +964,7 @@
   function preencherPainel(lote) {
     const m = state.data.meta;
     el.pLote.textContent = lote.id;
-    el.pGleba.textContent = lote.gleba != null ? String(lote.gleba) : '—';
+    el.pGleba.textContent = lote.gleba != null ? String(lote.gleba) + (lote.matricula ? ` · matrícula ${lote.matricula}` : '') : '—';
     el.pStatus.textContent = STATUS[lote.status];
     el.pStatus.className = `status status--${lote.status}`;
     el.pArea.textContent = fmtArea(lote.area);

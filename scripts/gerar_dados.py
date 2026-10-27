@@ -275,3 +275,8 @@ if r.returncode: print("ENRIQUECER FALHOU:", r.stderr[-1500:])
 r = subprocess.run([sys.executable, os.path.join(HERE, "decorar.py")], capture_output=True, text=True, encoding="utf-8", errors="replace")
 print(r.stdout[-800:])
 if r.returncode: print("DECORAR FALHOU:", r.stderr[-1500:])
+
+# ---------- 10) desmembramento registrado (34 glebas, matrículas 15.195–15.228) ----------
+r = subprocess.run([sys.executable, os.path.join(HERE, "registro.py")], capture_output=True, text=True, encoding="utf-8", errors="replace")
+print(r.stdout[-400:])
+if r.returncode: print("REGISTRO FALHOU:", r.stderr[-1500:])
