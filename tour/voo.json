@@ -1,58 +1,68 @@
 {
- "video": "img/voo-720.mp4?v=2",
- "video_movel": "img/voo-540.mp4?v=2",
- "capa": "img/voo-mini.jpg",
- "duracao": 216,
+ "video": "img/voo-720.mp4?v=3",
+ "video_movel": "img/voo-540.mp4?v=3",
+ "capa": "img/voo-mini.jpg?v=2",
+ "duracao": 198,
  "capitulos": [
   {
    "t": 0,
+   "titulo": "O Haras Rio São José",
+   "texto": "Chacreamento rural em Poções, Bahia."
+  },
+  {
+   "t": 6,
    "titulo": "Portaria nova",
-   "texto": "A entrada revitalizada, pela Estrada de Duas Vendas."
+   "texto": "A entrada revitalizada do Haras."
   },
   {
-   "t": 30,
-   "titulo": "Avenidas e rede elétrica",
-   "texto": "Avenidas cascalhadas com a rede elétrica ao lado."
+   "t": 31,
+   "titulo": "Onde fica",
+   "texto": "A 10 minutos do centro de Poções; 5 km, ou 5 minutos, do último bairro."
   },
   {
-   "t": 46,
-   "titulo": "Rede de água",
-   "texto": "A tubulação da rede-tronco sendo enterrada ao longo das avenidas."
+   "t": 38,
+   "titulo": "Área de lazer",
+   "texto": "A área de lazer em construção."
   },
   {
-   "t": 64,
-   "titulo": "Pelas avenidas",
-   "texto": "O Haras de ponta a ponta, com a mata nativa em volta."
+   "t": 49,
+   "titulo": "O clube de perto",
+   "texto": "O clube já pintado, sanitários e quiosques."
+  },
+  {
+   "t": 71,
+   "titulo": "Lago e preservação",
+   "texto": "Lago natural e área de preservação."
   },
   {
    "t": 82,
-   "titulo": "Base de reservatório",
-   "texto": "Um dos reservatórios do sistema de água, em construção."
+   "titulo": "A visão do todo",
+   "texto": "198 hectares em 34 glebas, lotes a partir de 2.000 m²."
   },
   {
-   "t": 98,
-   "titulo": "Chácaras habitadas",
-   "texto": "Famílias que já construíram e moram no Haras."
-  },
-  {
-   "t": 114,
-   "titulo": "Reservatórios e caixa d'água",
-   "texto": "Bases dos reservatórios e a caixa d'água do sistema."
-  },
-  {
-   "t": 128,
-   "titulo": "Glebas e chácaras",
-   "texto": "As glebas demarcadas, lotes a partir de 2.000 m²."
+   "t": 102,
+   "titulo": "Ruas identificadas",
+   "texto": "Todas as ruas com placa: passe rua por rua."
   },
   {
    "t": 158,
-   "titulo": "Vida no Haras",
-   "texto": "Casas, pomares e cercas: o Haras já tem vida."
+   "titulo": "Rede de água",
+   "texto": "A água já chegou: rede concluída, com poços artesianos."
   },
   {
-   "t": 188,
-   "titulo": "De volta à portaria",
-   "texto": "Fim do voo. Escolha a sua unidade no mapa."
+   "t": 169,
+   "titulo": "O primeiro morador",
+   "texto": "Recebendo a água em casa."
+  },
+  {
+   "t": 180,
+   "titulo": "Vida no Haras",
+   "texto": "Famílias já construindo no Haras."
+  },
+  {
+   "t": 192,
+   "titulo": "Agora é a sua vez",
+   "texto": "Mais de 70% já vendido. Escolha a sua unidade no mapa."
   }
  ]
 }

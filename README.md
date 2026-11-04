@@ -257,3 +257,6 @@ A cena "360-geral" do passeio virtual não mostra mais a esfera vista de cima: m
 
 ### Endereço novo (01/10/2026)
 Repositório e site migrados para a conta do Haras: **https://github.com/harasriosaojose/haras-rio-sao-jose-mapa** · **https://harasriosaojose.github.io/haras-rio-sao-jose-mapa/**. O endereço antigo (`jachsonazevedo.github.io/haras-rio-sao-jose-mapa/`) ficou só com `index.html`/`404.html` de redirecionamento automático, mantendo caminho, `?lote=` e `#cena` — links já enviados continuam funcionando. Publicar agora exige o `gh` com a conta **harasriosaojose** ativa (`gh auth switch -u harasriosaojose`).
+
+### Vídeos do tour com as filmagens de out/2026 (desde 04/11/2026)
+`tour/img/filme.mp4`, `abertura.mp4`, `voo-*.mp4`, `capa.jpg` e `voo-mini.jpg` são gerados fora do repositório, em `vendas-renegociacao/campanha-nov-dez-2026/_ferramentas/` (`montar_filme_tour.py`; `VOO=1 montar_video_app.py`; `capitulos_voo.py` grava `tour/voo.json`; depois `scripts/preparar_tour.py`). `scripts/gerar_filme.py` e `gerar_video_voo.py` ficam só como histórico.

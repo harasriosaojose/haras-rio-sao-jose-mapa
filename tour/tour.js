@@ -454,7 +454,7 @@ const FRASES = [
   { t0: 0.8, t1: 8.2, titulo: 'Imagine uma chácara aqui.', texto: 'Sua.' },
   { t0: 9.3, t1: 14.4, titulo: 'Um lugar de sossego e tranquilidade.', texto: 'Silêncio, ar puro e tempo para quem você ama.' },
   { t0: 15.5, t1: 20.2, titulo: 'Rede elétrica pronta,', texto: 'aguardando a ligação da Coelba.' },
-  { t0: 21.2, t1: 25.9, titulo: 'Água de poços artesianos,', texto: 'rede em fase final de instalação.' },
+  { t0: 21.2, t1: 25.9, titulo: 'Água de poços artesianos,', texto: 'a água já chegou, rede concluída.' },
   { t0: 26.9, t1: 31.1, titulo: 'Área de lazer', texto: 'em construção.' },
   { t0: 32.1, t1: 37.3, titulo: 'Muitas famílias já construíram suas chácaras', texto: 'e moram aqui.' },
   { t0: 38.3, t1: 44.6, titulo: 'Agora é a sua vez.', texto: 'Haras Rio São José · Poções – BA' },
@@ -647,7 +647,7 @@ async function iniciarTour() {
 }
 
 async function carregar() {
-  const r = await fetch('cenas.json?v=10', { cache: 'no-cache' });
+  const r = await fetch('cenas.json?v=11', { cache: 'no-cache' });
   dados = await r.json();
   montarMiniaturas();
   ligarEventos();
