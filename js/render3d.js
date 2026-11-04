@@ -250,7 +250,7 @@ async function gerarPlanta() {
   }
 
   // título (caixa do tamanho do texto) e bússola
-  const tTit = 'Planta humanizada do Haras Rio São José', tSub = 'CHACREAMENTO · POÇÕES – BA · 57 GLEBAS · LOTES A PARTIR DE 2.000 m²';
+  const tTit = 'Planta humanizada do Haras Rio São José', tSub = 'CHACREAMENTO · POÇÕES – BA · 34 GLEBAS · LOTES A PARTIR DE 2.000 m²';
   const wTit = Math.max(medir(tTit, '700 42px "Playfair Display", Georgia, serif', 0), medir(tSub, '600 17px Inter, sans-serif', 0)) + 48;
   g.fillStyle = 'rgba(251,248,239,.93)'; g.beginPath(); g.roundRect(28, 22, wTit, 110, 14); g.fill();
   g.fillStyle = '#183827'; g.font = '700 42px "Playfair Display", Georgia, serif'; g.textAlign = 'left'; g.textBaseline = 'alphabetic';

@@ -9,7 +9,7 @@ from collections import Counter
 HERE = os.path.dirname(os.path.abspath(__file__)); RAIZ = os.path.abspath(os.path.join(HERE, ".."))
 ARQ = os.path.join(RAIZ, "data", "lotes.json"); REG = json.load(open(os.path.join(RAIZ, "data", "registro_34.json"), encoding="utf-8"))
 # status informado pelo Jachson e ainda não lançado na Planilha Mestre (remover quando a planilha for atualizada)
-STATUS_AJUSTE = {"110": "vendido"}   # 27/10/2026: lote 110 vendido
+STATUS_AJUSTE = {}   # (110 lançado na Planilha Mestre em 04/11/2026, ACADE contrato 486)
 J = json.load(open(ARQ, encoding="utf-8"))
 if "glebas_planta" not in J: J["glebas_planta"] = J["glebas"]
 J["selos"] = [g["label"] for g in J["glebas_planta"] if isinstance(g.get("label"), list)]

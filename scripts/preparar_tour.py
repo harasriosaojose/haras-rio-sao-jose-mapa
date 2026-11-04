@@ -70,7 +70,7 @@ CENAS = [
     dict(id="glebas", foto=(NOVAS, "DJI_0687.JPG"), horizonte=0.10,
          sobre="O empreendimento", titulo="Glebas e a serra ao fundo",
          texto="As glebas demarcadas se estendem até a área de preservação ambiental. Ao fundo, a serra que emoldura Poções.",
-         pontos=[dict(x=2430, y=575, titulo="Glebas demarcadas", texto="Lotes a partir de 2.000 m², em 57 glebas.")]),
+         pontos=[dict(x=2430, y=575, titulo="Glebas demarcadas", texto="Lotes a partir de 2.000 m², em 34 glebas.")]),
     dict(id="cruzamento", foto=(NOVAS, "DJI_0697.JPG"), horizonte=0.14,
          sobre="O empreendimento", titulo="Cruzamento das avenidas",
          texto="Encontro das avenidas, com a rede elétrica e a mata nativa em volta. Terrenos amplos para a sua chácara rural.",
